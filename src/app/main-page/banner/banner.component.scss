@@ -1,0 +1,20 @@
+.banner {
+  height: 60vh;
+  width: 100vw;
+  max-width: 100%;
+  display: block;
+  background: black;
+  .banner-img {
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url(../../../assets/img/young-people.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    background-color: gray;
+    opacity: 0.6;
+  }
+}
