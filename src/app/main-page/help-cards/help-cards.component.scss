@@ -1,0 +1,13 @@
+.cards-wrapper {
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  p-card {
+    margin: 1rem;
+  }
+}

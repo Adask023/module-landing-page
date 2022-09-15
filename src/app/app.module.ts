@@ -9,9 +9,23 @@ import { HeaderComponent } from './main-page/header/header.component';
 import { BannerComponent } from './main-page/banner/banner.component';
 import { PostsComponent } from './main-page/posts/posts.component';
 
+import { HelpCardsComponent } from './main-page/help-cards/help-cards.component';
+import { CardModule } from 'primeng/card';
+import { DividerComponent } from './shared/divider/divider.component';
+import { ShopComponent } from './main-page/shop/shop.component';
+
 @NgModule({
-  declarations: [AppComponent, MainPageComponent, HeaderComponent, BannerComponent, PostsComponent],
-  imports: [BrowserModule, AppRoutingModule, ButtonModule],
+  declarations: [
+    AppComponent,
+    MainPageComponent,
+    HeaderComponent,
+    BannerComponent,
+    PostsComponent,
+    HelpCardsComponent,
+    DividerComponent,
+    ShopComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, ButtonModule, CardModule],
   providers: [],
   bootstrap: [AppComponent],
 })

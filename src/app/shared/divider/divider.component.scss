@@ -1,0 +1,13 @@
+.divider-wrapper {
+  height: 200px;
+  width: 100vw;
+  max-width: 100%;
+  display: block;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .text {
+    font-size: 2rem;
+  }
+}

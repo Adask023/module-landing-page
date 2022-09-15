@@ -1,0 +1,27 @@
+<div class="cards-wrapper">
+  <p-card
+    header="Pomoc poszukiwana"
+    subheader="Mężczyzna, lat 70"
+    [style]="{ width: '340px' }"
+    styleClass="p-card-shadow"
+  >
+    <ng-template pTemplate="header">
+      <img alt="Card" src="assets/img/old-man.jpg" />
+    </ng-template>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+      consequuntur error repudiandae numquam deserunt quisquam repellat libero
+      asperiores earum nam nobis, culpa ratione quam perferendis esse,
+      cupiditate neque quas!
+    </p>
+    <ng-template pTemplate="footer">
+      <p-button label="Czytaj więcej" icon="pi pi-check"></p-button>
+      <p-button
+        label="Telefon"
+        icon="pi pi-check"
+        styleClass="p-button-secondary"
+        [style]="{ 'margin-left': '.5em' }"
+      ></p-button>
+    </ng-template>
+  </p-card>
+</div>
