@@ -1,0 +1,54 @@
+<div class="register-page-wrapper">
+  <div class="register-header">
+    <div class="back-button-wrapper">
+      <a [routerLink]="['']">Strona główna</a>
+    </div>
+  </div>
+  <div class="register-card">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="grid p-fluid">
+        <div class="input-label">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              formControlName="login"
+              type="text"
+              pInputText
+              placeholder="login"
+            />
+          </div>
+        </div>
+        <div class="input-label">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              formControlName="password"
+              type="text"
+              pInputText
+              placeholder="hasło"
+            />
+          </div>
+        </div>
+        <div class="input-label">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              formControlName="phone"
+              type="text"
+              pInputText
+              placeholder="numer telefonu"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="Buttons-wrapper">
+        <p-button
+          [disabled]="!registerForm.valid"
+          styleClass="p-button-primary"
+          type="submit"
+          >Zarejestruj</p-button
+        >
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="city-wrapper">
+  <div class="city-name" (click)="showPopup('Kraków', 'img')">
+    <div class="header">Kraków</div>
+  </div>
+  <div class="city-name">
+    <div class="header">Kraków</div>
+  </div>
+  <div class="city-name">
+    <div class="header">Kraków</div>
+  </div>
+  <div class="city-name">
+    <div class="header">Kraków</div>
+  </div>
+</div>
+<div class="popup" *ngIf="popupShow">
+  popup <button class="close-button" (click)="closePopup()">X</button>
+</div>

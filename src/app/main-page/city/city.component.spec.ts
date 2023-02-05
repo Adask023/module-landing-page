@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainPageComponent } from './main-page.component';
+import { CityComponent } from './city.component';
 
-describe('MainPageComponent', () => {
-  let component: MainPageComponent;
-  let fixture: ComponentFixture<MainPageComponent>;
+describe('CityComponent', () => {
+  let component: CityComponent;
+  let fixture: ComponentFixture<CityComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainPageComponent ]
+      declarations: [ CityComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MainPageComponent);
+    fixture = TestBed.createComponent(CityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,22 @@
 .header {
   width: 100vw;
   max-width: 100%;
-  min-height: 150px;
+  min-height: 70px;
   background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .login-link-wrapper {
+    height: 100%;
+    padding: 10px;
+    margin-right: 20px;
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: #3b82f6;
+      }
+    }
+  }
 }

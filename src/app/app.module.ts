@@ -13,6 +13,15 @@ import { HelpCardsComponent } from './main-page/help-cards/help-cards.component'
 import { CardModule } from 'primeng/card';
 import { DividerComponent } from './shared/divider/divider.component';
 import { ShopComponent } from './main-page/shop/shop.component';
+import { CityComponent } from './main-page/city/city.component';
+import { CityPopupComponent } from './shared/city-popup/city-popup.component';
+import { httpService } from './services/http-req.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { CheckboxModule } from 'primeng/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterPageComponent } from './register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +33,23 @@ import { ShopComponent } from './main-page/shop/shop.component';
     HelpCardsComponent,
     DividerComponent,
     ShopComponent,
+    CityComponent,
+    CityPopupComponent,
+    LoginPageComponent,
+    RegisterPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ButtonModule, CardModule],
-  providers: [],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    ButtonModule,
+    CardModule,
+    InputTextModule,
+    CheckboxModule,
+    ButtonModule,
+    ReactiveFormsModule,
+  ],
+  providers: [httpService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,0 +1,49 @@
+<div class="login-page-wrapper">
+  <div class="login-header">
+    <div class="back-button-wrapper">
+      <a [routerLink]="['']">Strona główna</a>
+    </div>
+  </div>
+  <div class="login-banner">
+    <h1>Zaloguj się lub zarejestruj, aby pomóc osobom w twojej okolicy!</h1>
+  </div>
+  <div class="login-card">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="grid p-fluid">
+        <div class="input-label">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              formControlName="login"
+              type="text"
+              pInputText
+              placeholder="login"
+            />
+          </div>
+        </div>
+        <div class="input-label">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              formControlName="password"
+              type="text"
+              pInputText
+              placeholder="hasło"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="Buttons-wrapper">
+        <p-button [routerLink]="['/register']" styleClass="p-button-secondary"
+          >Zarejestruj</p-button
+        >
+        <p-button
+          [disabled]="!profileForm.valid"
+          styleClass="p-button-primary"
+          type="submit"
+          >Zaloguj</p-button
+        >
+      </div>
+    </form>
+  </div>
+</div>
