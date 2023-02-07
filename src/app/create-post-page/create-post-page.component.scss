@@ -1,0 +1,36 @@
+.create-post-page-wrapper {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+
+  .header {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    color: black;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    .content-wrapper {
+      .form-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .form-input {
+          width: 100%;
+          margin: 10px 0;
+
+          .form-text-input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

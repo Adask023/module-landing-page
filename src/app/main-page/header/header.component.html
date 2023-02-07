@@ -1,5 +1,16 @@
 <div class="header">
-  <div class="login-link-wrapper">
-    <a [routerLink]="['/login']">Zaloguj</a>
+  <div *ngIf="userData === null; else loginTemplate" class="login-link-wrapper">
+    <div class="header-link"><a [routerLink]="['/login']">Zaloguj</a></div>
   </div>
+  <ng-template #loginTemplate>
+    <div class="login-link-wrapper">
+      <div class="header-link">
+        <a [routerLink]="['/create']">Utwórz post</a>
+      </div>
+      <div class="header-link">
+        <a *ngIf="userData.is_admin" [routerLink]="['/admin']">Panel admina</a>
+      </div>
+      <div class="header-link"><a (click)="logout()">Wyloguj</a></div>
+    </div>
+  </ng-template>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { httpService } from '../services/http-req.service';
 
 @Component({
@@ -8,7 +9,11 @@ import { httpService } from '../services/http-req.service';
   styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent implements OnInit {
-  constructor(private fb: FormBuilder, private httpService: httpService) {}
+  constructor(
+    private fb: FormBuilder,
+    private httpService: httpService,
+    private router: Router
+  ) {}
 
   profileForm = this.fb.group({
     login: ['', Validators.required],
@@ -26,6 +31,10 @@ export class LoginPageComponent implements OnInit {
         )
         .subscribe((res) => {
           localStorage.setItem('user', JSON.stringify(res));
+          console.log(
+            `Zalogowano pomyślnie. Witaj ${this.profileForm.value.login}.`
+          );
+          this.router.navigate(['/']);
         });
     }
   }

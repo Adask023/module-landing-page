@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^14.2.1",
     "@angular/platform-browser-dynamic": "^14.2.1",
     "@angular/router": "^14.2.1",
+    "@ngneat/hot-toast": "^5.0.1",
+    "@ngneat/overview": "^2.0.2",
     "primeicons": "^5.0.0",
     "primeng": "^14.1.0",
     "rxjs": "~7.5.0",

@@ -1,0 +1,34 @@
+<div class="create-post-page-wrapper">
+  <div class="header"><h1>Utwórz swój post</h1></div>
+  <div class="content">
+    <div class="content-wrapper">
+      <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+        <div class="form-wrapper">
+          <div class="form-input">
+            <input
+              formControlName="title"
+              class="form-text-input"
+              type="text"
+              pInputText
+              placeholder="Tytuł postu..."
+              minlength="4"
+              maxlength="100"
+            />
+          </div>
+
+          <div class="form-input">
+            <textarea
+              formControlName="content"
+              [rows]="16"
+              [cols]="120"
+              pInputTextarea
+              [autoResize]="true"
+              placeholder="Napisz czego potrzebujesz..."
+            ></textarea>
+          </div>
+        </div>
+        <p-button type="submit" label="Zapisz"></p-button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -11,9 +11,17 @@ export class httpService {
       password: password,
     });
   }
+
   register(login: string, password: string, phone: string) {
     console.log(login);
     console.log(password);
     console.log(phone);
+  }
+
+  addPost(title: string, content: string) {
+    return this.http.post('http://127.0.0.1:4400/api/posts/create', {
+      title,
+      content,
+    });
   }
 }

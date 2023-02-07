@@ -22,6 +22,9 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './register-page/register-page.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { CreatePostPageComponent } from './create-post-page/create-post-page.component';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,8 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     CityPopupComponent,
     LoginPageComponent,
     RegisterPageComponent,
+    AdminPageComponent,
+    CreatePostPageComponent,
   ],
   imports: [
     HttpClientModule,
@@ -48,6 +53,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     CheckboxModule,
     ButtonModule,
     ReactiveFormsModule,
+    InputTextareaModule,
   ],
   providers: [httpService],
   bootstrap: [AppComponent],
