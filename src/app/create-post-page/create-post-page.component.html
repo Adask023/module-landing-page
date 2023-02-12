@@ -1,7 +1,12 @@
 <div class="create-post-page-wrapper">
-  <div class="header"><h1>Utwórz swój post</h1></div>
+  <div class="header">
+    <div class="back-button-wrapper">
+      <a [routerLink]="['']">Strona główna</a>
+    </div>
+  </div>
   <div class="content">
     <div class="content-wrapper">
+      <h1>Utwórz post</h1>
       <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
         <div class="form-wrapper">
           <div class="form-input">

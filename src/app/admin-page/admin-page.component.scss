@@ -1,0 +1,58 @@
+.admin-panel-wrapper {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    min-height: 70px;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .back-button-wrapper {
+      padding: 10px;
+      a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: #3b82f6;
+        }
+      }
+    }
+  }
+
+  .page-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-grow: 1;
+    min-height: calc(100vh - 70px);
+    .sidebar {
+      width: 200px;
+      height: 100%;
+      background-color: gray;
+      min-height: calc(100vh - 70px);
+      ul {
+        padding: 5px;
+        text-decoration: none;
+        li {
+          padding: 5px;
+          text-decoration: none;
+          text-transform: uppercase;
+          cursor: pointer;
+          &:hover {
+            color: #3b82f6;
+          }
+        }
+      }
+    }
+    .content {
+      padding: 20px;
+    }
+  }
+}

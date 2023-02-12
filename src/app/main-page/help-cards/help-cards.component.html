@@ -1,77 +1,18 @@
 <div class="cards-wrapper">
   <p-card
-    header="Pomoc poszukiwana"
-    subheader="Mężczyzna, lat 70"
+    *ngFor="let post of posts"
     [style]="{ width: '340px' }"
     styleClass="p-card-shadow"
   >
     <ng-template pTemplate="header">
-      <img alt="Card" src="assets/img/old-man.jpg" />
+      <img alt="Card" src="assets/img/user.png" />
     </ng-template>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
-      consequuntur error repudiandae numquam deserunt quisquam repellat libero
-      asperiores earum nam nobis, culpa ratione quam perferendis esse,
-      cupiditate neque quas!
-    </p>
+
+    <h2>{{ post.title }}</h2>
+    <h4>{{ post.content }}</h4>
+    <p>{{ post.telephone }}</p>
     <ng-template pTemplate="footer">
       <p-button label="Czytaj więcej" icon="pi pi-check"></p-button>
-      <p-button
-        label="Telefon"
-        icon="pi pi-check"
-        styleClass="p-button-secondary"
-        [style]="{ 'margin-left': '.5em' }"
-      ></p-button>
-    </ng-template>
-  </p-card>
-  <p-card
-    header="Pomoc poszukiwana"
-    subheader="Mężczyzna, lat 75"
-    [style]="{ width: '340px' }"
-    styleClass="p-card-shadow"
-  >
-    <ng-template pTemplate="header">
-      <img  alt="Card" src="assets/img/old-man-2.jpg" />
-    </ng-template>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
-      consequuntur error repudiandae numquam deserunt quisquam repellat libero
-      asperiores earum nam nobis, culpa ratione quam perferendis esse,
-      cupiditate neque quas!
-    </p>
-    <ng-template pTemplate="footer">
-      <p-button label="Czytaj więcej" icon="pi pi-check"></p-button>
-      <p-button
-        label="Telefon"
-        icon="pi pi-check"
-        styleClass="p-button-secondary"
-        [style]="{ 'margin-left': '.5em' }"
-      ></p-button>
-    </ng-template>
-  </p-card>
-  <p-card
-    header="Pomoc poszukiwana"
-    subheader="Kobieta, lat 87"
-    [style]="{ width: '340px' }"
-    styleClass="p-card-shadow"
-  >
-    <ng-template pTemplate="header">
-      <img alt="Card" src="assets/img/old-lady.jpg" />
-    </ng-template>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
-      consequuntur error repudiandae numquam deserunt quisquam repellat libero
-      asperiores earum nam nobis, culpa ratione quam perferendis esse,
-      cupiditate neque quas!
-    </p>
-    <ng-template pTemplate="footer">
-      <p-button label="Czytaj więcej" icon="pi pi-check"></p-button>
-      <p-button
-        label="Telefon"
-        icon="pi pi-check"
-        styleClass="p-button-secondary"
-        [style]="{ 'margin-left': '.5em' }"
-      ></p-button>
     </ng-template>
   </p-card>
 </div>

@@ -25,6 +25,8 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { CreatePostPageComponent } from './create-post-page/create-post-page.component';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { MyPostsPageComponent } from './my-posts-page/my-posts-page.component';
+import { ChangePermissionsComponent } from './change-permissions/change-permissions.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     RegisterPageComponent,
     AdminPageComponent,
     CreatePostPageComponent,
+    MyPostsPageComponent,
+    ChangePermissionsComponent,
   ],
   imports: [
     HttpClientModule,
