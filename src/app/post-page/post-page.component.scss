@@ -1,0 +1,39 @@
+.create-post-page-wrapper {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+
+  .header {
+    min-height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: lightgray;
+    color: black;
+    .back-button-wrapper {
+      padding: 10px;
+      a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: #3b82f6;
+        }
+      }
+    }
+  }
+  .title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+  .content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem;
+    font-size: 1.3rem;
+  }
+}

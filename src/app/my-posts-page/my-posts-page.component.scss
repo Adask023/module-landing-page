@@ -1,0 +1,21 @@
+.cards-wrapper {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  p-card {
+    margin: 1rem;
+  }
+  .header {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

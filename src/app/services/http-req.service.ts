@@ -48,4 +48,35 @@ export class httpService {
   getAllPosts() {
     return this.http.get('/api/posts/all');
   }
+
+  getMyPosts() {
+    return this.http.get('/api/posts');
+  }
+
+  removePost(id: string) {
+    return this.http.get(`/api/posts/${id}/delete`);
+  }
+
+  getPostDetails(id: number) {
+    return this.http.get(`/api/posts/${id}/one`);
+  }
+
+  changePassword(password: string, new_password: string) {
+    return this.http.post('/api/users/change-password', {
+      password,
+      new_password,
+    });
+  }
+
+  updateProfile(
+    new_telephone: string,
+    new_birth_year: string,
+    new_place: string
+  ) {
+    return this.http.post('/api/users/update-account', {
+      new_telephone,
+      new_birth_year,
+      new_place,
+    });
+  }
 }

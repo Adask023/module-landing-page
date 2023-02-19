@@ -1,1 +1,19 @@
-<p>change-permissions works!</p>
+<div class="page-wrapper">
+  <h1>Nadaj uprawnienia</h1>
+  <form [formGroup]="permissionsForm" (ngSubmit)="onSubmit()">
+    <div class="form-wrapper">
+      <div class="label">
+        <input
+          formControlName="username"
+          type="text"
+          pInputText
+          placeholder="login użytkownika"
+        />
+      </div>
+      <br />
+      <div class="label">
+        <p-button type="submit" label="Zapisz"></p-button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MessageService } from 'primeng/api';
 import { httpService } from '../services/http-req.service';
 
 @Component({
@@ -8,7 +9,11 @@ import { httpService } from '../services/http-req.service';
   styleUrls: ['./create-post-page.component.scss'],
 })
 export class CreatePostPageComponent implements OnInit {
-  constructor(private fb: FormBuilder, private httpService: httpService) {}
+  constructor(
+    private fb: FormBuilder,
+    private httpService: httpService,
+    private messageService: MessageService
+  ) {}
 
   postForm = this.fb.group({
     title: ['', Validators.required],
@@ -24,8 +29,12 @@ export class CreatePostPageComponent implements OnInit {
         this.postForm.value.title as string,
         this.postForm.value.content as string
       )
-      .subscribe((res) => {
-        console.log(res);
+      .subscribe(() => {
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Post został utworzony',
+        });
+        this.postForm.reset();
       });
   }
 }

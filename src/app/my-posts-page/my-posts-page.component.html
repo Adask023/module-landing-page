@@ -1,1 +1,34 @@
-<p>my-posts-page works!</p>
+<div class="cards-wrapper">
+  <h1 class="header">Moje posty</h1>
+
+  <p-table [value]="posts" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Tytuł</th>
+        <th>Zawartość</th>
+        <th>Opcje</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-post>
+      <tr>
+        <td>{{ post.title }}</td>
+        <td>{{ post.content }}</td>
+        <td>
+          <p-button
+            label="Czytaj więcej"
+            icon="pi pi-check"
+            [routerLink]="['../../post/' + post.id]"
+          ></p-button>
+          <button
+            pButton
+            pRipple
+            type="button"
+            label="Usuń"
+            class="p-button-danger"
+            (click)="deletePost(post.id)"
+          ></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

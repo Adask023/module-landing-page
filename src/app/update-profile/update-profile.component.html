@@ -1,0 +1,43 @@
+<div class="page-wrapper">
+  <h1>Zaktualizuj profil</h1>
+  <div class="form-wrapper">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="label">
+        <input
+          formControlName="tel"
+          class="form-text-input"
+          type="text"
+          pInputText
+          placeholder="Nowy numer telefonu"
+        />
+      </div>
+      <br />
+      <div class="label">
+        <input
+          formControlName="location"
+          class="form-text-input"
+          type="text"
+          pInputText
+          placeholder="Nowa lokalizacja"
+        />
+      </div>
+      <br />
+      <div class="label">
+        <input
+          formControlName="year"
+          type="number"
+          pInputText
+          placeholder="Nowy wiek"
+          min="1900"
+          max="2023"
+        />
+      </div>
+      <br />
+
+      <div class="label">
+        <br />
+        <p-button label="Zapisz" type="submit"></p-button>
+      </div>
+    </form>
+  </div>
+</div>

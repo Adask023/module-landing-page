@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private messageService: MessageService) {}
 
   public userData: any = {};
 
@@ -17,8 +18,11 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    console.log('wylogowano');
     localStorage.removeItem('user');
     this.userData = null;
+    this.messageService.add({
+      severity: 'success',
+      summary: 'Wylogowano pomyślnie',
+    });
   }
 }

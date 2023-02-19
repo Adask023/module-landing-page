@@ -12,7 +12,11 @@
     <h4>{{ post.content }}</h4>
     <p>{{ post.telephone }}</p>
     <ng-template pTemplate="footer">
-      <p-button label="Czytaj więcej" icon="pi pi-check"></p-button>
+      <p-button
+        label="Czytaj więcej"
+        icon="pi pi-check"
+        [routerLink]="['post/' + post.id]"
+      ></p-button>
     </ng-template>
   </p-card>
 </div>

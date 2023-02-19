@@ -33,7 +33,7 @@
     flex-grow: 1;
     min-height: calc(100vh - 70px);
     .sidebar {
-      width: 200px;
+      min-width: 200px;
       height: 100%;
       background-color: gray;
       min-height: calc(100vh - 70px);
@@ -50,9 +50,6 @@
           }
         }
       }
-    }
-    .content {
-      padding: 20px;
     }
   }
 }

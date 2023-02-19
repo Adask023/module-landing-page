@@ -27,6 +27,13 @@ import { CreatePostPageComponent } from './create-post-page/create-post-page.com
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MyPostsPageComponent } from './my-posts-page/my-posts-page.component';
 import { ChangePermissionsComponent } from './change-permissions/change-permissions.component';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableModule } from 'primeng/table';
+import { PostPageComponent } from './post-page/post-page.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +53,9 @@ import { ChangePermissionsComponent } from './change-permissions/change-permissi
     CreatePostPageComponent,
     MyPostsPageComponent,
     ChangePermissionsComponent,
+    PostPageComponent,
+    ChangePasswordComponent,
+    UpdateProfileComponent,
   ],
   imports: [
     HttpClientModule,
@@ -58,8 +68,11 @@ import { ChangePermissionsComponent } from './change-permissions/change-permissi
     ButtonModule,
     ReactiveFormsModule,
     InputTextareaModule,
+    ToastModule,
+    BrowserAnimationsModule,
+    TableModule,
   ],
-  providers: [httpService],
+  providers: [httpService, MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
