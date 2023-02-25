@@ -26,7 +26,7 @@ export class UpdateProfileComponent implements OnInit {
     if (this.profileForm.valid) {
       this.httpService
         .updateProfile(
-          this.profileForm.value.tel as string,
+          this.profileForm.value.tel?.toString() as string,
           this.profileForm.value.year?.toString() as string,
           this.profileForm.value.location as string
         )
