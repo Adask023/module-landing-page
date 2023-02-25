@@ -34,6 +34,7 @@ import { TableModule } from 'primeng/table';
 import { PostPageComponent } from './post-page/post-page.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { PanelModule } from 'primeng/panel';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
     ToastModule,
     BrowserAnimationsModule,
     TableModule,
+    PanelModule,
   ],
   providers: [httpService, MessageService],
   bootstrap: [AppComponent],

@@ -5,11 +5,20 @@
     </div>
   </div>
 
-  <div class="title-wrapper">
-    <h1>{{ postDetails?.title }}</h1>
-  </div>
-
   <div class="content-wrapper">
-    {{ postDetails?.content }}
+    <p-panel>
+      <ng-template pTemplate="header">
+        Tytuł: {{ postDetails?.title }}
+      </ng-template>
+      <div class="body">
+        {{ postDetails?.content }}
+      </div>
+
+      <ng-template pTemplate="footer">
+        <h4>Numer telefonu: {{ postDetails?.telephone }}</h4>
+        <h4>Imię: {{ postDetails?.user }}</h4>
+        <h4>Miejscowość: {{ postDetails?.place }}</h4>
+      </ng-template>
+    </p-panel>
   </div>
 </div>
