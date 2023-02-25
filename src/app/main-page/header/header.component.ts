@@ -12,13 +12,13 @@ export class HeaderComponent implements OnInit {
   public userData: any = {};
 
   ngOnInit(): void {
-    this.userData = localStorage.getItem('user');
+    this.userData = sessionStorage.getItem('user');
     this.userData = JSON.parse(this.userData);
     console.log(this.userData);
   }
 
   logout() {
-    localStorage.removeItem('user');
+    sessionStorage.removeItem('user');
     this.userData = null;
     this.messageService.add({
       severity: 'success',

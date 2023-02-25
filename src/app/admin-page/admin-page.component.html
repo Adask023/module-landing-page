@@ -8,10 +8,27 @@
   <div class="page-wrapper">
     <div class="sidebar">
       <ul>
-        <li [routerLink]="['my-posts']">Twoje posty</li>
-        <li [routerLink]="['change-permissions']">Nadaj uprawnienia</li>
-        <li [routerLink]="['change-password']">Zmień hasło</li>
-        <li [routerLink]="['update-profile']">Zaktualizuj profil</li>
+        <li [routerLink]="['my-posts']" [routerLinkActive]="['active-link']">
+          Twoje posty
+        </li>
+        <li
+          [routerLink]="['change-permissions']"
+          [routerLinkActive]="['active-link']"
+        >
+          Nadaj uprawnienia
+        </li>
+        <li
+          [routerLink]="['change-password']"
+          [routerLinkActive]="['active-link']"
+        >
+          Zmień hasło
+        </li>
+        <li
+          [routerLink]="['update-profile']"
+          [routerLinkActive]="['active-link']"
+        >
+          Zaktualizuj profil
+        </li>
       </ul>
     </div>
     <div>

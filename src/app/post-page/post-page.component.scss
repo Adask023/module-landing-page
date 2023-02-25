@@ -37,3 +37,9 @@
     font-size: 1.3rem;
   }
 }
+
+.text-dots {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

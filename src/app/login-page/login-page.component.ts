@@ -32,7 +32,7 @@ export class LoginPageComponent implements OnInit {
           this.profileForm.value.password as string
         )
         .subscribe((res) => {
-          localStorage.setItem('user', JSON.stringify(res));
+          sessionStorage.setItem('user', JSON.stringify(res));
           console.log(
             `Zalogowano pomyślnie. Witaj ${this.profileForm.value.login}.`
           );

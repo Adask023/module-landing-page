@@ -19,3 +19,9 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.text-dots {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
